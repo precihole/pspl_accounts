@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include pspl_accounts *.css
+recursive-include pspl_accounts *.csv
+recursive-include pspl_accounts *.html
+recursive-include pspl_accounts *.ico
+recursive-include pspl_accounts *.js
+recursive-include pspl_accounts *.json
+recursive-include pspl_accounts *.md
+recursive-include pspl_accounts *.png
+recursive-include pspl_accounts *.py
+recursive-include pspl_accounts *.svg
+recursive-include pspl_accounts *.txt
+recursive-exclude pspl_accounts *.pyc
