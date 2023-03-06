@@ -1,0 +1,228 @@
+{
+ "actions": [],
+ "autoname": "prompt",
+ "creation": "2023-03-05 13:13:08.899788",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "general_ledger_filters_section",
+  "from_date",
+  "company",
+  "account",
+  "group_by",
+  "cost_center",
+  "column_break_l3fj6",
+  "to_date",
+  "finance_book",
+  "currency",
+  "project",
+  "suppliers_section",
+  "supplier_group",
+  "fetch_suppliers",
+  "suppliers",
+  "preferences",
+  "orientation",
+  "column_break_b3bhi",
+  "letter_head",
+  "terms_and_conditions",
+  "email_settings_section",
+  "sender",
+  "subject",
+  "column_break_zrjc4",
+  "cc_to",
+  "section_break_y60bx",
+  "body"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_ledger_filters_section",
+   "fieldtype": "Section Break",
+   "label": "General Ledger Filters"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account"
+  },
+  {
+   "default": "Group by Voucher (Consolidated)",
+   "fieldname": "group_by",
+   "fieldtype": "Select",
+   "label": "Group By",
+   "options": "\nGroup by Voucher\nGroup by Voucher (Consolidated)"
+  },
+  {
+   "fieldname": "column_break_l3fj6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "finance_book",
+   "fieldtype": "Link",
+   "label": "Finance Book",
+   "options": "Finance Book"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "suppliers_section",
+   "fieldtype": "Section Break",
+   "label": "Suppliers"
+  },
+  {
+   "fieldname": "suppliers",
+   "fieldtype": "Table",
+   "label": "suppliers",
+   "options": "Process Statement Of Accounts Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "preferences",
+   "fieldtype": "Section Break",
+   "label": "Print Preferences"
+  },
+  {
+   "fieldname": "orientation",
+   "fieldtype": "Select",
+   "label": "Orientation",
+   "options": "Landscape\nPortrait"
+  },
+  {
+   "fieldname": "column_break_b3bhi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Link",
+   "label": "Terms and Conditions",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fieldname": "email_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Email Settings"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "column_break_zrjc4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cc_to",
+   "fieldtype": "Table MultiSelect",
+   "label": "CC To",
+   "options": "Assignment Rule User"
+  },
+  {
+   "fieldname": "section_break_y60bx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "body",
+   "fieldtype": "Text Editor",
+   "label": "Body"
+  },
+  {
+   "fieldname": "fetch_suppliers",
+   "fieldtype": "Button",
+   "label": "Fetch Suppliers"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Table MultiSelect",
+   "label": "Cost Center",
+   "options": "PSOA Cost Center"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Table MultiSelect",
+   "label": "Project",
+   "options": "PSOA Project"
+  },
+  {
+   "fieldname": "supplier_group",
+   "fieldtype": "Link",
+   "label": "Select Suppliers By Group",
+   "options": "Supplier Group"
+  },
+  {
+   "default": "Accounts",
+   "fieldname": "sender",
+   "fieldtype": "Link",
+   "label": "Sender",
+   "options": "Email Account"
+  }
+ ],
+ "links": [],
+ "modified": "2023-03-06 12:31:31.290951",
+ "modified_by": "Administrator",
+ "module": "PSPL Accounts",
+ "name": "PSPL Process Statement Of Accounts",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
