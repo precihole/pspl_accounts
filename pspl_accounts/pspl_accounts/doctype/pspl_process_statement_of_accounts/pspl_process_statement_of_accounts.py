@@ -130,6 +130,9 @@ def get_context(supplier, doc):
 
 @frappe.whitelist()
 def send_emails(document_name, from_scheduler=False):
+	signature_template = (
+		"pspl_accounts/pspl_accounts/doctype/pspl_process_statement_of_accounts/signature.html"
+	)
 	doc = frappe.get_doc("PSPL Process Statement Of Accounts", document_name)
 	report = get_report_pdf(doc, consolidated=False)
 
@@ -140,7 +143,7 @@ def send_emails(document_name, from_scheduler=False):
 			recipients, cc = get_recipients_and_cc(supplier, doc)
 			context = get_context(supplier, doc)
 			subject = frappe.render_template(doc.subject, context)
-			message = frappe.render_template(doc.body, context)
+			message = frappe.render_template(doc.body, context) + frappe.render_template(signature_template, context)
 
 			frappe.enqueue(
 				queue="short",
