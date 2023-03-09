@@ -32,6 +32,7 @@
   "subject",
   "column_break_zrjc4",
   "cc_to",
+  "reply_to",
   "section_break_y60bx",
   "body"
  ],
@@ -186,10 +187,16 @@
    "fieldtype": "Link",
    "label": "Sender",
    "options": "Email Account"
+  },
+  {
+   "fieldname": "reply_to",
+   "fieldtype": "Table MultiSelect",
+   "label": "Reply-To",
+   "options": "Assignment Rule User"
   }
  ],
  "links": [],
- "modified": "2023-03-06 12:31:31.290951",
+ "modified": "2023-03-09 15:06:25.811409",
  "modified_by": "Administrator",
  "module": "PSPL Accounts",
  "name": "PSPL Process Statement Of Accounts",
